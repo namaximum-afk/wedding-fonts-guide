@@ -4,35 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- SEO: Описание для Pinterest и поисковиков -->
-    <meta name="description" content="Discover curated wedding fonts for invitations, menus, and websites. Elegant, readable typography selections with professional pairing advice.">
+    <meta name="description" content="Wedding fonts for invitations, menus and websites. Curated, readable type combinations with simple pairing tips.">
     <title>Wedding Font Guide | Elegant Wedding Fonts for Your Big Day</title>
-    
-    <!-- Шрифты: Cormorant Garamond (основной свадебный) и Montserrat (читаемый вспомогательный) -->
+
+    <!-- Шрифты: Cormorant Garamond (заголовки) и Montserrat (текст) -->
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <style>
-        /* Основная цветовая палитра */
         :root {
-            --color-bg: #FAF6F3; /* Кремовый фон */
-            --color-rose: #F4E7E4; /* Пыльная роза */
-            --color-sage: #8DA290; /* Шалфейный акцент */
-            --color-text: #4A4A4A; /* Мягкий графитовый текст */
+            --color-bg: #FAF6F3;   /* кремовый фон */
+            --color-rose: #F4E7E4; /* пыльная роза */
+            --color-sage: #8DA290; /* шалфей */
+            --color-text: #4A4A4A; /* мягкий графит */
         }
 
         body {
-            font-family: 'Montserrat', sans-serif; /* Читаемый шрифт для основного текста */
+            font-family: 'Montserrat', sans-serif;
             background-color: var(--color-bg);
             color: var(--color-text);
             line-height: 1.8;
         }
 
         h1, h2, h3, .serif {
-            font-family: 'Cormorant Garamond', serif; /* Элегантный шрифт для заголовков */
+            font-family: 'Cormorant Garamond', serif;
             font-weight: 500;
         }
 
-        /* Эффект параллакса (Fixed Background) */
+        /* Параллакс */
         .parallax-bg {
             background-attachment: fixed;
             background-position: center;
@@ -40,42 +39,47 @@
             background-size: cover;
         }
 
-        /* Отключение параллакса на мобильных для плавности прокрутки */
         @media (max-width: 768px) {
             .parallax-bg {
                 background-attachment: scroll !important;
             }
         }
 
-        /* Фоновые изображения для параллакс-блоков */
+        /* Фоны блоков */
         .hero-bg {
-            background-image: linear-gradient(rgba(250, 246, 243, 0.65), rgba(250, 246, 243, 0.65)), 
-                              url('rustic-barn.jpg');
+            background-image: linear-gradient(rgba(250, 246, 243, 0.85), rgba(250, 246, 243, 0.85)),
+                              url('hero-bg.jpg');
         }
 
         .divider-bg {
-            background-image: linear-gradient(rgba(244, 231, 228, 0.5), rgba(244, 231, 228, 0.5)), 
-                              url('soft-signature.jpg');
+            background-image: linear-gradient(rgba(244, 231, 228, 0.75), rgba(244, 231, 228, 0.75)),
+                              url('divider-bg.jpeg');
             height: 450px;
         }
 
         .footer-bg {
-            background-image: linear-gradient(rgba(45, 52, 54, 0.5), rgba(45, 52, 54, 0.5)), 
-                              url('boho-duo.jpg');
+            background-image: linear-gradient(rgba(20, 24, 26, 0.6), rgba(20, 24, 26, 0.7)),
+                              url('footer-bg.jpeg');
         }
 
-        /* Стилизация карточек шрифтов */
+        /* Карточки шрифтов */
         .font-card {
-            background: rgba(255, 255, 255, 0.85);
+            background: rgba(255, 255, 255, 0.9);
             backdrop-filter: blur(10px);
             transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-            border: 1px solid rgba(255, 255, 255, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.7);
         }
 
         .font-card:hover {
             transform: translateY(-10px);
-            background: white;
-            box-shadow: 0 30px 60px rgba(141, 162, 144, 0.15);
+            background: #FFFFFF;
+            box-shadow: 0 30px 60px rgba(141, 162, 144, 0.18);
+        }
+
+        /* Лёгкая фактура для секций */
+        .bg-texture {
+            background-image: radial-gradient(circle at 1px 1px, rgba(244, 231, 228, 0.45) 1px, transparent 0);
+            background-size: 18px 18px;
         }
 
         .fade-in {
@@ -84,7 +88,7 @@
 
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            to   { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
@@ -93,16 +97,20 @@
     <!-- Навигация -->
     <header class="py-8 px-6 md:px-12 flex justify-between items-center relative z-20">
         <div class="logo text-xl font-medium tracking-[0.2em] uppercase text-gray-700">WeddingFontGuide</div>
-        <a href="https://www.creativefabrica.com/fonts/wedding-fonts/ref/5466775/?campaign=wedding-fonts" class="text-xs font-bold uppercase tracking-[0.3em] text-gray-400 hover:text-[#8DA290] transition-all">Catalog</a>
+        <a href="https://www.creativefabrica.com/fonts/wedding-fonts/ref/5466775/?campaign=wedding-fonts" class="text-xs font-bold uppercase tracking-[0.3em] text-gray-400 hover:text-[#8DA290] transition-all">
+            Catalog
+        </a>
     </header>
 
     <main>
-        <!-- Секция HERO -->
+        <!-- HERO -->
         <section class="parallax-bg hero-bg min-h-screen flex items-center justify-center text-center px-6 relative">
-            <div class="max-w-4xl mx-auto fade-in">
+            <div class="max-w-4xl mx-auto fade-in bg-[rgba(250,246,243,0.9)] rounded-3xl px-6 py-10 shadow-[0_20px_60px_rgba(0,0,0,0.12)]">
                 <span class="serif italic text-4xl text-[#8DA290] mb-4 block">Truly timeless</span>
-                <h1 class="text-6xl md:text-8xl mb-8 leading-tight italic">Elegant Wedding Fonts <br> <span class="not-italic">for Your Big Day.</span></h1>
-                <p class="text-sm uppercase tracking-[0.2em] text-gray-500 max-w-2xl mx-auto mb-10 font-medium">
+                <h1 class="text-5xl md:text-7xl mb-8 leading-tight italic text-gray-900">
+                    Elegant Wedding Fonts <br> <span class="not-italic">for Your Big Day.</span>
+                </h1>
+                <p class="text-sm uppercase tracking-[0.2em] text-gray-600 max-w-2xl mx-auto mb-10 font-medium">
                     Wedding fonts for invitations, menus, websites, and signage — so you stop testing random scripts and move straight to layouts guests can actually read.
                 </p>
                 <a href="https://www.creativefabrica.com/fonts/wedding-fonts/ref/5466775/?campaign=wedding-fonts" class="bg-[#8DA290] text-white px-12 py-5 rounded-full uppercase text-xs font-bold tracking-widest shadow-lg hover:opacity-90 transition-all inline-block">
@@ -111,33 +119,41 @@
             </div>
         </section>
 
-        <!-- Секция ПРОБЛЕМЫ -->
-        <section class="py-32 px-6 bg-white">
+        <!-- ПРОБЛЕМА -->
+        <section class="py-32 px-6 bg-white border-t border-[rgba(141,162,144,0.18)]">
             <div class="max-w-5xl mx-auto text-center">
-                <h2 class="text-4xl md:text-5xl mb-12 italic text-gray-900">Why “Pretty” Fonts Often <span class="not-italic">Ruin Wedding Stationery</span></h2>
+                <h2 class="text-4xl md:text-5xl mb-12 italic text-gray-900">
+                    Why “Pretty” Fonts Often <span class="not-italic">Ruin Wedding Stationery</span>
+                </h2>
                 <div class="grid md:grid-cols-3 gap-12 text-left">
                     <div class="space-y-4">
                         <span class="text-xs font-bold text-[#8DA290] uppercase tracking-widest">The Print Scenario</span>
-                        <p class="text-lg font-light text-gray-500 leading-relaxed serif">You print a stack of invitations and notice that the elegant script has almost disappeared into the paper. Thin strokes look beautiful on screen, but in real life guests have to guess if the wedding starts at 3 or 8 o’clock.</p>
+                        <p class="text-lg font-light text-gray-600 leading-relaxed serif">
+                            You print a stack of invitations and notice that the elegant script has almost disappeared into the paper. Thin strokes look beautiful on screen, but in real life guests have to guess if the wedding starts at 3 or 8 o’clock.
+                        </p>
                     </div>
                     <div class="space-y-4">
                         <span class="text-xs font-bold text-[#8DA290] uppercase tracking-widest">Digital Struggles</span>
-                        <p class="text-lg font-light text-gray-500 leading-relaxed serif">On mobile, the same font turns long names and venue lines into a solid knot. A layout that seemed perfect in a desktop mockup becomes hard to read in a browser or on a Pinterest graphic, so you reopen the file and change typography again.</p>
+                        <p class="text-lg font-light text-gray-600 leading-relaxed serif">
+                            On mobile, the same font turns long names and venue lines into a solid knot. A layout that seemed perfect in a desktop mockup becomes hard to read in a browser or on a Pinterest graphic, so you reopen the file and change typography again.
+                        </p>
                     </div>
                     <div class="space-y-4">
                         <span class="text-xs font-bold text-[#8DA290] uppercase tracking-widest">The Solution</span>
-                        <p class="text-lg font-light text-gray-500 leading-relaxed serif">The safest approach is not to collect dozens of fonts, but to work with a small tested set of wedding fonts that stays clear in long names, dates, and real layouts — on textured paper, screens, and large signage.</p>
+                        <p class="text-lg font-light text-gray-600 leading-relaxed serif">
+                            The safest approach is not to collect dozens of fonts, but to work with a small tested set of wedding fonts that stays clear in long names, dates, and real layouts — on textured paper, screens, and large signage.
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- ГРУППА ШРИФТОВ 1 -->
-        <section id="top-picks" class="py-32 px-6 bg-[#FAF6F3]">
+        <section id="top-picks" class="py-32 px-6 bg-[#FAF6F3] bg-texture border-t border-[rgba(141,162,144,0.15)]">
             <div class="max-w-7xl mx-auto">
                 <div class="text-center mb-20">
-                    <h2 class="text-5xl italic mb-4">Curated Fonts for Real Layouts</h2>
-                    <p class="text-xs uppercase tracking-[0.3em] text-gray-400 font-semibold">The Foundation Collection</p>
+                    <h2 class="text-5xl italic mb-4 text-gray-900">Curated Fonts for Real Layouts</h2>
+                    <p class="text-xs uppercase tracking-[0.3em] text-gray-500 font-semibold">The Foundation Collection</p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -146,8 +162,12 @@
                         <img src="soft-signature.jpg" alt="Elegant wedding invitations on cream table with sage ribbon" class="w-full h-56 object-cover">
                         <div class="p-8">
                             <h3 class="text-2xl mb-3 font-semibold text-gray-800">Soft Signature Vows</h3>
-                            <p class="text-sm text-gray-500 mb-6 font-light serif">Smooth, handwritten curves for names on invitations, welcome signs, and ceremony programs. Letters stay distinct even in double surnames, so guests read them at a glance.</p>
-                            <a href="https://www.creativefabrica.com/product/wedding-signature-9/ref/5466775/?campaign=wedding-fonts" class="text-xs font-bold uppercase tracking-widest text-[#8DA290] border-b border-[#8DA290] pb-1 hover:text-[#7A8E7D] transition-colors">View Font</a>
+                            <p class="text-sm text-gray-600 mb-6 font-light serif">
+                                Smooth, handwritten curves for names on invitations, welcome signs, and ceremony programs. Letters stay distinct even in double surnames, so guests read them at a glance.
+                            </p>
+                            <a href="https://www.creativefabrica.com/product/wedding-signature-9/ref/5466775/?campaign=wedding-fonts" class="text-xs font-bold uppercase tracking-widest text-[#8DA290] border-b border-[#8DA290] pb-1 hover:text-[#7A8E7D] transition-colors">
+                                View Font
+                            </a>
                         </div>
                     </article>
                     <!-- Rustic Barn Promise -->
@@ -155,8 +175,12 @@
                         <img src="rustic-barn.jpg" alt="Rustic wedding decor with kraft paper and wood" class="w-full h-56 object-cover">
                         <div class="p-8">
                             <h3 class="text-2xl mb-3 font-semibold text-gray-800">Rustic Barn Promise</h3>
-                            <p class="text-sm text-gray-500 mb-6 font-light serif">Organic strokes that feel at home next to wood, linen, and kraft paper. Works well on invitations, table numbers, and bar signs for outdoor or barn‑style celebrations.</p>
-                            <a href="https://www.creativefabrica.com/product/rustic-wedding/ref/5466775/?campaign=wedding-fonts" class="text-xs font-bold uppercase tracking-widest text-[#8DA290] border-b border-[#8DA290] pb-1 hover:text-[#7A8E7D] transition-colors">View Font</a>
+                            <p class="text-sm text-gray-600 mb-6 font-light serif">
+                                Organic strokes that feel at home next to wood, linen, and kraft paper. Works well on invitations, table numbers, and bar signs for outdoor or barn‑style celebrations.
+                            </p>
+                            <a href="https://www.creativefabrica.com/product/rustic-wedding/ref/5466775/?campaign=wedding-fonts" class="text-xs font-bold uppercase tracking-widest text-[#8DA290] border-b border-[#8DA290] pb-1 hover:text-[#7A8E7D] transition-colors">
+                                View Font
+                            </a>
                         </div>
                     </article>
                     <!-- Modern Vows Script -->
@@ -164,8 +188,12 @@
                         <img src="modern-vows.jpg" alt="Minimalist wedding stationery flatlay" class="w-full h-56 object-cover">
                         <div class="p-8">
                             <h3 class="text-2xl mb-3 font-semibold text-gray-800">Modern Vows Script</h3>
-                            <p class="text-sm text-gray-500 mb-6 font-light serif">A clean script for minimalist layouts with plenty of white space. Elegant loops keep the design emotional, while clear shapes make dates and short phrases easy to read.</p>
-                            <a href="https://www.creativefabrica.com/product/the-wedding-signature/ref/5466775/?campaign=wedding-fonts" class="text-xs font-bold uppercase tracking-widest text-[#8DA290] border-b border-[#8DA290] pb-1 hover:text-[#7A8E7D] transition-colors">View Font</a>
+                            <p class="text-sm text-gray-600 mb-6 font-light serif">
+                                A clean script for minimalist layouts with plenty of white space. Elegant loops keep the design emotional, while clear shapes make dates and short phrases easy to read.
+                            </p>
+                            <a href="https://www.creativefabrica.com/product/the-wedding-signature/ref/5466775/?campaign=wedding-fonts" class="text-xs font-bold uppercase tracking-widest text-[#8DA290] border-b border-[#8DA290] pb-1 hover:text-[#7A8E7D] transition-colors">
+                                View Font
+                            </a>
                         </div>
                     </article>
                     <!-- Joyful Celebration Script -->
@@ -173,8 +201,12 @@
                         <img src="joyful-celebration.jpg" alt="Colorful garden party table setting" class="w-full h-56 object-cover">
                         <div class="p-8">
                             <h3 class="text-2xl mb-3 font-semibold text-gray-800">Joyful Celebration Script</h3>
-                            <p class="text-sm text-gray-500 mb-6 font-light serif">Lively, bouncy letterforms for destination weddings, garden parties, and joyful brunch receptions. Especially good for place cards and thank‑you notes in smaller sizes.</p>
-                            <a href="https://www.creativefabrica.com/product/happy-wedding-60/ref/5466775/?campaign=wedding-fonts" class="text-xs font-bold uppercase tracking-widest text-[#8DA290] border-b border-[#8DA290] pb-1 hover:text-[#7A8E7D] transition-colors">View Font</a>
+                            <p class="text-sm text-gray-600 mb-6 font-light serif">
+                                Lively, bouncy letterforms for destination weddings, garden parties, and joyful brunch receptions. Especially good for place cards and thank‑you notes in smaller sizes.
+                            </p>
+                            <a href="https://www.creativefabrica.com/product/happy-wedding-60/ref/5466775/?campaign=wedding-fonts" class="text-xs font-bold uppercase tracking-widest text-[#8DA290] border-b border-[#8DA290] pb-1 hover:text-[#7A8E7D] transition-colors">
+                                View Font
+                            </a>
                         </div>
                     </article>
                 </div>
@@ -183,17 +215,19 @@
 
         <!-- ПАРАЛЛАКС-РАЗДЕЛИТЕЛЬ -->
         <section class="parallax-bg divider-bg relative flex items-center justify-center">
-            <div class="text-center px-6 text-white drop-shadow-lg">
-                <h2 class="text-4xl md:text-6xl italic">"One Font Rarely Fits Every Detail"</h2>
+            <div class="text-center px-6 text-gray-900">
+                <h2 class="text-4xl md:text-6xl italic drop-shadow-[0_10px_30px_rgba(0,0,0,0.25)]">
+                    "One Font Rarely Fits Every Detail"
+                </h2>
             </div>
         </section>
 
         <!-- ГРУППА ШРИФТОВ 2 -->
-        <section class="py-32 px-6 bg-white">
+        <section class="py-32 px-6 bg-white border-t border-[rgba(141,162,144,0.15)]">
             <div class="max-w-7xl mx-auto">
                 <div class="text-center mb-20">
-                    <h2 class="text-4xl italic mb-4">Fonts for Names, Details & Monograms</h2>
-                    <p class="text-xs uppercase tracking-[0.3em] text-gray-400 font-semibold">The Hierarchy Collection</p>
+                    <h2 class="text-4xl italic mb-4 text-gray-900">Fonts for Names, Details & Monograms</h2>
+                    <p class="text-xs uppercase tracking-[0.3em] text-gray-500 font-semibold">The Hierarchy Collection</p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -202,8 +236,12 @@
                         <img src="boho-duo.jpg" alt="Boho wedding suite with pampas grass and sunset tones" class="w-full h-48 object-cover">
                         <div class="p-8">
                             <h3 class="text-2xl mb-3 font-semibold text-gray-800">Boho Sunset Duo</h3>
-                            <p class="text-sm text-gray-500 mb-6 font-light serif">Script and companion font that were made to live together. Use the script for names and short phrases, and the matching font for dates and menu lines to keep the suite consistent.</p>
-                            <a href="https://www.creativefabrica.com/product/boho-wedding-duo/ref/5466775/?campaign=wedding-fonts" class="text-xs font-bold uppercase tracking-widest text-[#8DA290] border-b border-[#8DA290] pb-1 hover:text-[#7A8E7D] transition-colors">View Duo</a>
+                            <p class="text-sm text-gray-600 mb-6 font-light serif">
+                                Script and companion font that were made to live together. Use the script for names and short phrases, and the matching font for dates and menu lines to keep the suite consistent.
+                            </p>
+                            <a href="https://www.creativefabrica.com/product/boho-wedding-duo/ref/5466775/?campaign=wedding-fonts" class="text-xs font-bold uppercase tracking-widest text-[#8DA290] border-b border-[#8DA290] pb-1 hover:text-[#7A8E7D] transition-colors">
+                                View Duo
+                            </a>
                         </div>
                     </article>
                     <!-- Heirloom Monogram -->
@@ -211,8 +249,12 @@
                         <img src="heirloom-monogram.jpg" alt="Wax seal monogram on cream paper" class="w-full h-48 object-cover">
                         <div class="p-8">
                             <h3 class="text-2xl mb-3 font-semibold text-gray-800">Heirloom Monogram</h3>
-                            <p class="text-sm text-gray-500 mb-6 font-light serif">Created for crests, wax seals, and logo‑style marks on envelopes and thank‑you cards. Details stay readable when you use foil, embossing, or very small sizes.</p>
-                            <a href="https://www.creativefabrica.com/product/wedding-monogram-4/ref/5466775/?campaign=wedding-fonts" class="text-xs font-bold uppercase tracking-widest text-[#8DA290] border-b border-[#8DA290] pb-1 hover:text-[#7A8E7D] transition-colors">View Monogram</a>
+                            <p class="text-sm text-gray-600 mb-6 font-light serif">
+                                Created for crests, wax seals, and logo‑style marks on envelopes and thank‑you cards. Details stay readable when you use foil, embossing, or very small sizes.
+                            </p>
+                            <a href="https://www.creativefabrica.com/product/wedding-monogram-4/ref/5466775/?campaign=wedding-fonts" class="text-xs font-bold uppercase tracking-widest text-[#8DA290] border-b border-[#8DA290] pb-1 hover:text-[#7A8E7D] transition-colors">
+                                View Monogram
+                            </a>
                         </div>
                     </article>
                     <!-- Classic Vows Serif -->
@@ -220,8 +262,12 @@
                         <img src="classic-vows.jpg" alt="Wedding program and menu on white plate with linen napkin" class="w-full h-48 object-cover">
                         <div class="p-8">
                             <h3 class="text-2xl mb-3 font-semibold text-gray-800">Classic Vows Serif</h3>
-                            <p class="text-sm text-gray-500 mb-6 font-light serif">A calm serif that holds practical information: dates, addresses, and timings. Balances expressive scripts and helps guests focus on what they need to know.</p>
-                            <a href="https://www.creativefabrica.com/product/wedding-34/ref/5466775/?campaign=wedding-fonts" class="text-xs font-bold uppercase tracking-widest text-[#8DA290] border-b border-[#8DA290] pb-1 hover:text-[#7A8E7D] transition-colors">View Serif</a>
+                            <p class="text-sm text-gray-600 mb-6 font-light serif">
+                                A calm serif that holds practical information: dates, addresses, and timings. Balances expressive scripts and helps guests focus on what they need to know.
+                            </p>
+                            <a href="https://www.creativefabrica.com/product/wedding-34/ref/5466775/?campaign=wedding-fonts" class="text-xs font-bold uppercase tracking-widest text-[#8DA290] border-b border-[#8DA290] pb-1 hover:text-[#7A8E7D] transition-colors">
+                                View Serif
+                            </a>
                         </div>
                     </article>
                     <!-- Mandala Ceremony -->
@@ -229,8 +275,12 @@
                         <img src="mandala-ceremony.jpg" alt="Ornate wedding invitation with mandala pattern" class="w-full h-48 object-cover">
                         <div class="p-8">
                             <h3 class="text-2xl mb-3 font-semibold text-gray-800">Mandala Ceremony</h3>
-                            <p class="text-sm text-gray-500 mb-6 font-light serif">Decorative script with an intricate rhythm. Use it for titles or short blessings where you want maximum visual impact with just a few words.</p>
-                            <a href="https://www.creativefabrica.com/product/wedding-by-mandala/ref/5466775/?campaign=wedding-fonts" class="text-xs font-bold uppercase tracking-widest text-[#8DA290] border-b border-[#8DA290] pb-1 hover:text-[#7A8E7D] transition-colors">View Mandala</a>
+                            <p class="text-sm text-gray-600 mb-6 font-light serif">
+                                Decorative script with an intricate rhythm. Use it for titles or short blessings where you want maximum visual impact with just a few words.
+                            </p>
+                            <a href="https://www.creativefabrica.com/product/wedding-by-mandala/ref/5466775/?campaign=wedding-fonts" class="text-xs font-bold uppercase tracking-widest text-[#8DA290] border-b border-[#8DA290] pb-1 hover:text-[#7A8E7D] transition-colors">
+                                View Mandala
+                            </a>
                         </div>
                     </article>
                 </div>
@@ -238,7 +288,7 @@
         </section>
 
         <!-- FAQ -->
-        <section class="py-32 bg-[#FAF6F3] px-6">
+        <section class="py-32 bg-[#FAF6F3] bg-texture px-6 border-t border-[rgba(141,162,144,0.15)]">
             <div class="max-w-4xl mx-auto">
                 <h2 class="text-4xl italic text-center mb-20 text-gray-900">Wedding Font FAQ</h2>
                 <div class="space-y-6">
@@ -247,7 +297,9 @@
                             <h3 class="serif text-xl tracking-normal normal-case font-medium">Do these work for print and digital?</h3>
                             <span class="text-[#8DA290] group-open:rotate-180 transition-transform">↓</span>
                         </summary>
-                        <p class="mt-4 text-gray-500 font-light leading-relaxed serif">Many wedding fonts on Creative Fabrica are supplied in formats suitable for both print and digital projects. Before you design, check the product page to see which file types are included (OTF/WOFF) and test a sample in your software.</p>
+                        <p class="mt-4 text-gray-600 font-light leading-relaxed serif">
+                            Many wedding fonts on Creative Fabrica are supplied in formats suitable for both print and digital projects. Before you design, check the product page to see which file types are included (OTF/WOFF) and test a sample in your software.
+                        </p>
                     </details>
                     
                     <details class="group bg-white rounded-2xl p-6 cursor-pointer border border-transparent hover:border-[#8DA290] transition-all">
@@ -255,7 +307,9 @@
                             <h3 class="serif text-xl tracking-normal normal-case font-medium">How many fonts should I use in one design?</h3>
                             <span class="text-[#8DA290] group-open:rotate-180 transition-transform">↓</span>
                         </summary>
-                        <p class="mt-4 text-gray-500 font-light leading-relaxed serif">A simple structure that works in most cases is two or three fonts: one script for names, one clear serif or sans‑serif for details, and an optional style for initials. This keeps the design consistent without visual noise.</p>
+                        <p class="mt-4 text-gray-600 font-light leading-relaxed serif">
+                            A simple structure that works in most cases is two or three fonts: one script for names, one clear serif or sans‑serif for details, and an optional style for initials. This keeps the design consistent without visual noise.
+                        </p>
                     </details>
 
                     <details class="group bg-white rounded-2xl p-6 cursor-pointer border border-transparent hover:border-[#8DA290] transition-all">
@@ -263,7 +317,9 @@
                             <h3 class="serif text-xl tracking-normal normal-case font-medium">How do I test if a font is readable enough?</h3>
                             <span class="text-[#8DA290] group-open:rotate-180 transition-transform">↓</span>
                         </summary>
-                        <p class="mt-4 text-gray-500 font-light leading-relaxed serif">Type the full names and date, then print a quick test or zoom out to 50% on your screen. If you can still read every number without guessing, the font is ready for real invitations.</p>
+                        <p class="mt-4 text-gray-600 font-light leading-relaxed serif">
+                            Type the full names and date, then print a quick test or zoom out to 50% on your screen. If you can still read every number without guessing, the font is ready for real invitations.
+                        </p>
                     </details>
                 </div>
             </div>
@@ -272,8 +328,12 @@
         <!-- FINAL CTA -->
         <section class="parallax-bg footer-bg py-48 px-6 text-center relative overflow-hidden">
             <div class="max-w-4xl mx-auto text-white">
-                <h2 class="text-5xl md:text-7xl mb-12 italic leading-tight drop-shadow-lg">Ready to Match <br> Your Wedding Story?</h2>
-                <p class="max-w-2xl mx-auto mb-10 text-lg font-light serif drop-shadow-md">The right fonts turn names and dates into invitations guests want to keep, photograph, and share. Explore this curated selection on Creative Fabrica, test it on your wording, and build one coherent look from the first save‑the‑date to the last thank‑you card.</p>
+                <h2 class="text-5xl md:text-7xl mb-12 italic leading-tight drop-shadow-[0_15px_40px_rgba(0,0,0,0.35)]">
+                    Ready to Match <br> Your Wedding Story?
+                </h2>
+                <p class="max-w-2xl mx-auto mb-10 text-lg font-light serif drop-shadow-md">
+                    The right fonts turn names and dates into invitations guests want to keep, photograph, and share. Explore this curated selection on Creative Fabrica, test it on your wording, and build one coherent look from the first save‑the‑date to the last thank‑you card.
+                </p>
                 <div class="flex flex-col md:flex-row justify-center gap-6">
                     <a href="https://www.creativefabrica.com/fonts/wedding-fonts/ref/5466775/?campaign=wedding-fonts" class="bg-white text-gray-900 px-16 py-6 rounded-full uppercase text-xs font-bold tracking-[0.2em] shadow-2xl hover:scale-105 transition-all">
                         Browse Wedding Fonts on Creative Fabrica
@@ -284,7 +344,9 @@
     </main>
 
     <footer class="py-16 px-6 text-center border-t border-gray-100">
-        <p class="text-xs uppercase tracking-[0.4em] text-gray-400 font-medium">© 2026 WeddingFontGuide. Photography via Unsplash. Wedding fonts, clearly explained.</p>
+        <p class="text-xs uppercase tracking-[0.4em] text-gray-400 font-medium">
+            © 2026 WeddingFontGuide. Wedding fonts, clearly explained.
+        </p>
     </footer>
 
 </body>
